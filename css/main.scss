@@ -1,0 +1,61 @@
+$colors: (
+    main-background: #090b1a,
+    card-background: #1b1938,
+    heading-text: #ffffff,
+    filter-color: #7a00c5,
+    text-highlight: #aa5cdb
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+body {
+    background-color: color(main-background);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+main {
+    background-color: color(card-background);
+    color: color(heading-text);
+    width: 300px;
+    border-radius: 10px;  
+}
+img {
+    width: 300px;
+    border-radius: 10px 10px 0 0;
+    filter: opacity(50%);
+    display: block;
+}
+.img-filter {
+    background-color: color(filter-color);
+    border-radius: 10px 10px 0 0;
+}
+h1, .intro {
+    font-family: 'Inter', sans-serif;
+    width: 260px;
+}
+ul {
+    font-family: 'Inter', sans-serif;
+    list-style: none;
+    padding: 0;
+}
+span {
+    color: color(text-highlight);
+}
+h1 {
+    font-size: 26px;
+    margin: 30px auto 20px auto;
+}
+.intro {
+    font-size: 15px;
+    margin: 0 auto;
+    line-height: 25px;
+    color: #ffffffbf;
+}
+.selling-points {
+    font-family: 'Lexend Deca', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff99;
+}
