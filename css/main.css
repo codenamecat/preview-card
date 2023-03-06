@@ -1,3 +1,16 @@
+html {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
 body {
   background-color: #090b1a;
   display: -webkit-box;
@@ -12,16 +25,44 @@ body {
 main {
   background-color: #1b1938;
   color: #ffffff;
-  width: 300px;
+  width: 85%;
+  max-width: 500px;
   border-radius: 10px;
 }
 
+@media (min-width: 1119px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    justify-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    text-align: left;
+    margin: auto;
+  }
+}
+
 img {
-  width: 300px;
+  width: 100%;
   border-radius: 10px 10px 0 0;
   -webkit-filter: opacity(50%);
           filter: opacity(50%);
   display: block;
+}
+
+@media (min-width: 1119px) {
+  img {
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 .img-filter {
@@ -29,9 +70,22 @@ img {
   border-radius: 10px 10px 0 0;
 }
 
+@media (min-width: 1119px) {
+  .img-filter {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
 h1, .intro {
   font-family: 'Inter', sans-serif;
-  width: 260px;
+  width: 86%;
+  max-width: 470px;
+}
+
+@media (min-width: 1119px) {
+  h1, .intro {
+    max-width: 500px;
+  }
 }
 
 ul {
@@ -40,18 +94,32 @@ ul {
   padding: 0;
 }
 
+@media (min-width: 1119px) {
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+h2 {
+  margin: 0;
+}
+
 span {
   color: #aa5cdb;
 }
 
 h1 {
   font-size: 26px;
-  margin: 30px auto 20px auto;
+  margin: 30px auto 0 auto;
 }
 
 .intro {
   font-size: 15px;
-  margin: 0 auto;
+  margin: 20px auto 40px auto;
   line-height: 25px;
   color: #ffffffbf;
 }
@@ -60,5 +128,19 @@ h1 {
   font-family: 'Lexend Deca', sans-serif;
   text-transform: uppercase;
   color: #ffffff99;
+  font-size: 12px;
+  margin: 5px 0 30px 0;
+}
+
+@media (min-width: 1119px) {
+  li {
+    margin: 20px 0 0 0;
+  }
+}
+
+@media (min-width: 1119px) {
+  .primary {
+    padding: 0px 60px 0 40px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
